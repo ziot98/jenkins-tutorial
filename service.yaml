@@ -1,6 +1,5 @@
 apiVersion: apps/v1
-kind: DeploymentCredential 생성시에는 Login ID, Password 로 생성합니다.
-(Secret Text로 하면 Jenkins 버
+kind: Deployment
 metadata:
   name: hello-flask
   labels:
@@ -17,7 +16,7 @@ spec:
     spec:
       containers:
       - name: flask-app
-        image: 998902534284.dkr.ecr.ap-northeast-2.amazonaws.com/test-repository:IMAGE_VERSION
+        image: 260118685294.dkr.ecr.ap-northeast-2.amazonaws.com/jenkins-test:v0.3
         imagePullPolicy: Always
         ports:
         - containerPort: 80
